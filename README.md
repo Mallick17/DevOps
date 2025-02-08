@@ -81,3 +81,38 @@ A **web server** is a system that hosts and delivers web content to users over t
   - Additional components for dynamic web servers, such as:
     - **Application servers**: Software that processes and generates dynamic content.
     - **Databases**: Stores data used to generate dynamic content.
+
+### What is HTTP?
+- HTTP is a **textual, stateless protocol** used for transferring hypertext (linked web documents) between clients and servers.
+  - **Textual**: Commands are plain-text and human-readable.
+  - **Stateless**: Neither the server nor the client retains information about previous interactions.
+
+### How a Web Server Works
+- **Basic Workflow of HTTP**
+1. **Request**: A client(browser) sends an HTTP request for a file hosted on the web server.
+2. **Processing**: The HTTP server receives the request, locates the file, and processes it (if necessary).
+3. **Response**: The server sends the file back to the browser via HTTP. If the file is not found, the server returns a **404 error**.
+
+### Static vs. Dynamic Web Servers
+- **Static Web Server**:
+  - Consists of a computer (hardware) with an HTTP server (software).
+  - Sends files "as-is" to the browser.
+  - Ideal for simple websites with fixed content.
+  - **Static Content**
+    - **Definition**: Files served "as-is" without modification.
+    - **Use Case**: Simple websites with fixed content.
+    - **Advantages**: Easy to set up and maintain.
+
+- **Dynamic Web Server**:
+  - Includes a static web server plus additional software (e.g., an application server and a database).
+  - Generates content dynamically before sending it to the browser.
+  - Used for complex websites like MDN or Wikipedia, where content is pulled from databases and templates.
+  - **Dynamic Content**
+    - **Definition**: Content generated or processed by the server before being sent to the client.
+    - **Use Case**: Complex websites with frequently updated content (e.g., blogs, e-commerce sites).
+    - **Advantages**: Greater flexibility and scalability.
+    - **Challenges**: Requires a more complex technical stack (e.g., application servers, databases).
+
+
+
+
