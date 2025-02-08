@@ -93,7 +93,7 @@ A **web server** is a system that hosts and delivers web content to users over t
 2. **Processing**: The HTTP server receives the request, locates the file, and processes it (if necessary).
 3. **Response**: The server sends the file back to the browser via HTTP. If the file is not found, the server returns a **404 error**.
 <br>
-![webserver-http](https://github.com/user-attachments/assets/c3f41f1c-0c06-4907-a3ce-2f98f8df0514)
+[webserver-http](https://github.com/user-attachments/assets/c3f41f1c-0c06-4907-a3ce-2f98f8df0514)
 
 
 
