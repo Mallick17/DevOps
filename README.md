@@ -63,3 +63,21 @@ Let’s say you visit `www.example.com`:
 4. The browser requests these resources from the server.
 5. Once all resources are loaded, the browser displays the complete webpage.
 ---
+
+## Web Server(Explained)
+A **web server** is a system that hosts and delivers web content to users over the internet. It can refer to both the hardware and software components that work together to serve web pages and other resources to clients (typically web browsers).
+
+### Components of a Web Server
+
+1. **Hardware**
+- A web server, on the hardware side, is a computer that stores:
+  - **Web server software** (e.g., Apache, Nginx).
+  - **Website files** (e.g., HTML documents, images, CSS stylesheets, JavaScript files, fonts, and videos).
+- The hardware connects to the internet and facilitates data exchange with other devices.
+
+2. **Software**
+- The software side of a web server includes:
+  - An **HTTP server**: Software that understands **URLs** (web addresses) and **HTTP** (the protocol used by browsers to request and display web pages).
+  - Additional components for dynamic web servers, such as:
+    - **Application servers**: Software that processes and generates dynamic content.
+    - **Databases**: Stores data used to generate dynamic content.
