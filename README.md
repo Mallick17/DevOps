@@ -122,7 +122,27 @@ Server-side website programming refers to the process of handling and processing
   - Requests for dynamic resources are instead forwarded (2) to server-side code (shown in the diagram as a Web Application). For "dynamic requests" the server interprets the request, reads required information from the database (3), combines the retrieved data with HTML templates (4), and sends back a response containing the generated HTML (5,6).
     ![web_application_with_html_and_steps](https://github.com/user-attachments/assets/031ac80a-c742-4109-9008-c8e4b014f4bc)
 
+## Are server-side and client-side programming the same?
+| **Aspect**                  | **Client-Side Programming**                                                                 | **Server-Side Programming**                                                                 |
+|-----------------------------|--------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
+| **Purpose**                 | Improves appearance and behavior of a rendered web page.                                   | Handles which content is returned to the browser in response to requests.                  |
+| **Main Concerns**           | UI components, layouts, navigation, form validation, etc.                                  | Data validation, database interactions, sending correct data to the client.                |
+| **Programming Languages**   | HTML, CSS, JavaScript.                                                                     | PHP, Python, Ruby, C#, JavaScript (NodeJS), etc.                                           |
+| **Execution Environment**   | Runs inside a web browser.                                                                 | Runs on a server operating system.                                                         |
+| **Access to OS**            | Limited or no access to the underlying operating system (e.g., restricted file system access). | Full access to the server operating system.                                                |
+| **Browser Compatibility**   | Must handle inconsistencies in browser support for features.                               | Not applicable (developer controls the server environment).                                |
+| **Frameworks**              | Simplifies layout and presentation tasks (e.g., React, Angular, Vue).                      | Provides common web server functionality (e.g., Django, Flask, Express).                   |
+| **Development Speed**       | Can write code by hand for small, simple UIs; frameworks speed up development for complex UIs. | Almost always uses frameworks to avoid reinventing core functionality (e.g., HTTP servers). |
+| **Example Tasks**           | Styling, animations, form validation, client-side routing.                                 | Database operations, user authentication, server-side rendering, API endpoints.            |
 
+### Key Notes:
+1. **JavaScript Exception**: JavaScript is unique as it can be used for both client-side and server-side programming (via NodeJS).
+2. **Frameworks**: 
+   - Client-side frameworks focus on UI/UX (e.g., React, Angular).
+   - Server-side frameworks focus on backend logic (e.g., Django, Express).
+3. **Control**: 
+   - Client-side code is limited by browser capabilities and user environment.
+   - Server-side code is fully controlled by the developer, including language and version choices.
 
 
 
