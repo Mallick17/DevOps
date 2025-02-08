@@ -34,3 +34,32 @@ A **search engine** is a special type of website (like Google, Bing, or DuckDuck
 - A **search engine** is a website that helps you find web pages.
 
 For example, when you open a browser, it might show a search engine's homepage (like Google) or a search bar. This is why the two are often confused.
+
+---
+## **How Does the Web Work?**
+When you use the web, a lot happens behind the scenes to deliver the content you see. Here’s a simplified breakdown:
+
+1. **You Make a Request**:
+   - You type a URL into your browser or click a link.
+   - Your browser sends a request to the web server where the website is hosted.
+
+2. **The Web Server Responds**:
+   - The web server processes the request and sends the requested files (e.g., the web page, images, or videos) back to your browser.
+
+3. **Your Browser Displays the Content**:
+   - The browser receives the files and assembles them into the web page you see.
+   - If the web page includes additional resources (like images or scripts), the browser will make more requests to fetch those.
+
+4. **You See the Result**:
+   - Once all the files are loaded, the browser displays the complete web page.
+
+This process uses a technology called **HTTP** (Hypertext Transfer Protocol), which defines how requests and responses are handled.
+
+### **Example: Loading a Website**
+Let’s say you visit `www.example.com`:
+1. Your browser requests the main HTML file for the homepage from the web server.
+2. The server sends the HTML file to your browser.
+3. The browser reads the HTML file and finds instructions to load additional resources (e.g., images, styles, scripts).
+4. The browser requests these resources from the server.
+5. Once all resources are loaded, the browser displays the complete webpage.
+---
