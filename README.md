@@ -94,7 +94,8 @@ A **web server** is a system that hosts and delivers web content to users over t
 3. **Response**: The server sends the file back to the browser via HTTP. If the file is not found, the server returns a **404 error**.
 ![webserver-http](https://github.com/user-attachments/assets/c3f41f1c-0c06-4907-a3ce-2f98f8df0514)
 
-
+# Server-Side Website Programming
+Server-side website programming refers to the process of handling and processing user requests on a web server before sending a response back to the web browser. This involves using various programming languages and frameworks to create dynamic web pages that can interact with databases and perform complex operations.
 
 ### Static vs. Dynamic Web Servers
 - **Static Web Server**:
@@ -105,16 +106,22 @@ A **web server** is a system that hosts and delivers web content to users over t
     - **Definition**: Files served "as-is" without modification.
     - **Use Case**: Simple websites with fixed content.
     - **Advantages**: Easy to set up and maintain.
+  - The server retrieves the requested document from its file system and returns an HTTP response containing the document and a success status (usually 200 OK). If the file cannot be retrieved for some reason, an error status is returned.
+   ![basic_static_app_server](https://github.com/user-attachments/assets/fc8caff8-c600-47c1-9075-cf573488c706)
 
 - **Dynamic Web Server**:
   - Includes a static web server plus additional software (e.g., an application server and a database).
   - Generates content dynamically before sending it to the browser.
   - Used for complex websites like MDN or Wikipedia, where content is pulled from databases and templates.
+  - Most of the code to support a dynamic website must run on the server. Creating this code is known as **"server-side programming"** (or sometimes **"back-end scripting"**).
   - **Dynamic Content**
     - **Definition**: Content generated or processed by the server before being sent to the client.
     - **Use Case**: Complex websites with frequently updated content (e.g., blogs, e-commerce sites).
     - **Advantages**: Greater flexibility and scalability.
     - **Challenges**: Requires a more complex technical stack (e.g., application servers, databases).
+  - Requests for dynamic resources are instead forwarded (2) to server-side code (shown in the diagram as a Web Application). For "dynamic requests" the server interprets the request, reads required information from the database (3), combines the retrieved data with HTML templates (4), and sends back a response containing the generated HTML (5,6).
+    ![web_application_with_html_and_steps](https://github.com/user-attachments/assets/031ac80a-c742-4109-9008-c8e4b014f4bc)
+
 
 
 
