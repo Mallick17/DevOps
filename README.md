@@ -92,6 +92,9 @@ A **web server** is a system that hosts and delivers web content to users over t
 1. **Request**: A client(browser) sends an HTTP request for a file hosted on the web server.
 2. **Processing**: The HTTP server receives the request, locates the file, and processes it (if necessary).
 3. **Response**: The server sends the file back to the browser via HTTP. If the file is not found, the server returns a **404 error**.
+<br>
+![webserver-http](https://github.com/user-attachments/assets/e1101265-c1f8-48b3-a46e-05007f47ae35)
+
 
 ### Static vs. Dynamic Web Servers
 - **Static Web Server**:
