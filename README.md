@@ -1,6 +1,4 @@
-# DevOps
-Concepts related to Development &amp; Operations.
-
+# Web Page, Web Site, Web Server, Search Engine
 ## **What is a Web Page?**
 A **web page** is a document that can be displayed in a web browser (like Chrome, Firefox, or Safari). It can include:
 - **Text**: The main content of the page.
