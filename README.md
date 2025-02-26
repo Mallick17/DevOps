@@ -4,6 +4,8 @@
 
 ## OSI Model
 - The **OSI (Open Systems Interconnection)** Model is a set of rules that explains how different computer systems communicate over a network. OSI Model was developed by the **International Organization for Standardization (ISO)**. The OSI Model consists of 7 layers and each layer has specific functions and responsibilities. This layered approach makes it easier for different devices and technologies to work together. OSI Model provides a clear structure for data transmission and managing network issues. The OSI Model is widely used as a reference to understand how network systems function.
+![osi_model_7_layers](https://github.com/user-attachments/assets/72f04348-c9ef-49ec-84d7-7e867e7af0f5)
+
 ### **Breaking Down the OSI Model**
 #### **1. Physical Layer (Layer 1)**
 - The Physical Layer is all about the hardware that makes up a network, like cables and routers. It handles sending and receiving data.
