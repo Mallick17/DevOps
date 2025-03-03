@@ -60,6 +60,7 @@
 ---
 
 ### **How Data Travels Through the OSI Model (Example of an HTTP Request)**  
+![Screenshot 2025-02-26 121702](https://github.com/user-attachments/assets/01442827-24b7-4c79-be6d-9f80fc57a1f5)
 
 #### **Step 1: Application Layer (Layer 7)**
 - A user sends an **HTTP request** to access a webpage.
