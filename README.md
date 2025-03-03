@@ -67,7 +67,7 @@
 - The **HTTP header** is added to the data.
 
 #### **Step 2: Transport Layer (Layer 4)**
-- The data from the application layer is broken into smaller parts as per the MSS of the network and the TCP header is added to the smaller parts.
+- The data from the application layer is broken into smaller parts as per the MSS(Maximum Segment Size) of the network and the TCP header is added to the smaller parts.
 - A **TCP header** includes the following
 ```ini
 1. Source Port          ##  12345  
