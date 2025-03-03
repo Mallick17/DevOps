@@ -116,8 +116,57 @@ These segments form the key parts of a TCP header and play crucial roles in esta
 - Source and Destination port are required because it tells in which PDU(Protocol Data Unit - the PDU is a segment (for TCP) or a datagram (for UDP)) is to be delivered in the receiver host. The checksum field of the TCP is calculated by taking into account the TCP header, data and IP pseudo-header. The Checksum ensures that correct data is sent and received. Thus, after all these processing the broken data packets are called Segments.
   
 #### **Step 3: Network Layer (Layer 3)**
-- The TCP segments are wrapped in an **IP header**.
-- The **IP header contains source and destination IP addresses**.
+- The segments received from the Transport layer are further processed to form the Packets.
+- The **IP header contains source, destination IP addresses and has many fields include the following**.
+```ini
+1. Source IP Address        ##  192.168.1.1
+2. Destination IP Address   ##  10.0.0.5
+3. TTL (Time to Live)       ##  64
+4. Identification           ##  0x12345
+5. Protocol Type            ##  6 (TCP)
+6. Version (Protocol Version) ##  4 (IPv4)
+7. Options                  ##  No-Option
+```
+
+<details>
+  <summary>Click to view detailed Breakdown of each SEGMENT for PACKETS</summary>
+
+### Breakdown of each segment:
+
+1. **Source IP Address**  
+   - **Example**: `192.168.1.1`  
+     This is the IP address of the sender (the source of the packet).
+
+2. **Destination IP Address**  
+   - **Example**: `10.0.0.5`  
+     This is the IP address of the recipient (the destination of the packet).
+
+3. **TTL (Time to Live)**  
+   - **Example**: `64`  
+     TTL is a field used to limit the lifetime of the packet. It specifies the number of hops (routers) the packet is allowed to pass through before being discarded. Each router that processes the packet decrements this value by 1. If TTL reaches 0, the packet is dropped. 
+
+4. **Identification**  
+   - **Example**: `0x12345`  
+     This value is used to uniquely identify fragments of a larger IP packet. When a packet is fragmented, the identification value helps the receiver reassemble the fragments into the correct order.
+
+5. **Protocol Type**  
+   - **Example**: `6`  
+     This indicates the protocol used in the data portion of the IP packet. For example:
+     - `6` means **TCP** (Transmission Control Protocol).
+     - `17` means **UDP** (User Datagram Protocol).
+     - `1` means **ICMP** (Internet Control Message Protocol).
+
+6. **Version (Protocol Version)**  
+   - **Example**: `4`  
+     This specifies the IP protocol version being used. For IPv4, this is `4`, and for IPv6, it would be `6`.
+
+7. **Options**  
+   - **Example**: `No-Option`  
+     The options field allows for additional features or controls in the IP header (like security, routing, or timestamp options). If no options are used, it might be empty, or the field might be marked as "No-Option".
+
+These segments are part of the **IP header** and help ensure the proper delivery and handling of IP packets across networks.
+
+</details>
 
 #### **Step 4: Data Link Layer (Layer 2)**
 - The packet(IP datagram) is wrapped with a **MAC header**.
