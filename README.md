@@ -113,6 +113,8 @@ These segments form the key parts of a TCP header and play crucial roles in esta
 
 </details>
 
+- Source and Destination port are required because it tells in which PDU(Protocol Data Unit - the PDU is a segment (for TCP) or a datagram (for UDP)) is to be delivered in the receiver host. The checksum field of the TCP is calculated by taking into account the TCP header, data and IP pseudo-header. The Checksum ensures that correct data is sent and received. Thus, after all these processing the broken data packets are called Segments.
+  
 #### **Step 3: Network Layer (Layer 3)**
 - The TCP segments are wrapped in an **IP header**.
 - The **IP header contains source and destination IP addresses**.
