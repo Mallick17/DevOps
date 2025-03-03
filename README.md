@@ -129,7 +129,7 @@ These segments form the key parts of a TCP header and play crucial roles in esta
 ```
 
 <details>
-  <summary>Click to view detailed Breakdown of each SEGMENT for PACKETS</summary>
+  <summary>Click to view detailed Breakdown of each PACKETS field</summary>
 
 ### Breakdown of each segment:
 
@@ -183,7 +183,47 @@ The **IP layer** also handles **fragmentation**. If a packet is too large to tra
 
 #### **Step 4: Data Link Layer (Layer 2)**
 - The packet(IP datagram) is wrapped with a **MAC header**.
-- The **MAC header contains source and destination MAC addresses**.
+- The Packets received from the Network Layer further processed to form the Frames.
+- The **MAC header contains source, destination MAC addresses as mentioned below with few other segments**.
+```ini
+1. Source MAC Address      ##  00:1A:2B:3C:4D:5E
+2. Destination MAC Address ##  00:5E:4D:3C:2B:1A
+3. Data                    ##  Hello, this is a test message.
+4. Length                  ##  0x0014 (20 bytes)
+5. Checksum (CRC)          ##  0xA1B2C3D4
+```
+
+<details>
+  <summary>Click to view detailed Breakdown of each FRAME field</summary>
+
+### Breakdown of each frame field:
+
+1. **Source MAC Address**  
+   - **Example**: `00:1A:2B:3C:4D:5E`  
+     This is the **MAC address** of the device sending the frame. It is unique to each network interface card (NIC).
+
+2. **Destination MAC Address**  
+   - **Example**: `00:5E:4D:3C:2B:1A`  
+     This is the **MAC address** of the device receiving the frame.
+
+3. **Data**  
+   - **Example**: `Hello, this is a test message.`  
+     This is the actual **payload** or data being sent inside the frame.
+
+4. **Length**  
+   - **Example**: `0x0014` (20 bytes)  
+     The **length** indicates the size of the data portion of the frame. In this case, it’s 20 bytes.
+
+5. **Checksum (CRC)**  
+   - **Example**: `0xA1B2C3D4`  
+     The **checksum** or **CRC** (Cyclic Redundancy Check) is used to detect errors in the frame. If the checksum doesn’t match when the receiver checks it, the frame is discarded.
+
+This is the basic structure of an **Ethernet frame**, which is used to transmit data on a local network. The frame ensures the data is correctly addressed, sized, and checked for errors.
+
+</details>
+
+- The source MAC address is resolved by using the ARP(Address Resolution Protocol). The Source and Destination MAC address would keep on modifying as the Frame moves in the network. The Modification of the MAC address is done by the Routers. Data is the segment that is received from the network layer. The length is the total MTU(maximum transferable unit) of the network. All concepts will be clear with the diagram given below.
+
 
 #### **Step 5: Physical Layer (Layer 1)**
 - Data is converted into **raw bits (0s and 1s)** and transmitted through the network.
