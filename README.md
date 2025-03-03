@@ -345,8 +345,6 @@ This is the basic structure of an **Ethernet frame**, which is used to transmit 
 ![tcp_ip_model_with_protocols_and_addresses-h](https://github.com/user-attachments/assets/91b7120c-2902-4b8b-bc83-d95fa462c0b1)
 
 ## OSI vs TCP/IP Model
-![OSI-vs-TCP](https://github.com/user-attachments/assets/5498ea21-5e75-4618-8349-08394bcf2a64)
-
 
 | **Parameter**                     | **OSI Model**                                                                                                   | **TCP/IP Model**                                                                                             |
 |------------------------------------|-----------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
