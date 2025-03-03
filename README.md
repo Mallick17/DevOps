@@ -67,8 +67,51 @@
 - The **HTTP header** is added to the data.
 
 #### **Step 2: Transport Layer (Layer 4)**
-- TCP segments the data into smaller packets.
-- A **TCP header** is added with **source port, destination port, and sequence number**.
+- The data from the application layer is broken into smaller parts as per the MSS of the network and the TCP header is added to the smaller parts.
+- A **TCP header** includes the following
+```ini
+1. Source Port          ##  12345  
+2. Destination Port     ##  80  
+3. Flag bits            ##  DF, MF  
+4. Sequence Number      ##  4567890123  
+5. Checksum             ##  0x1A2B3C4D  
+6. Options Field        ##  Max Segment Size: 1460, No-Operation
+```
+
+<details>
+  <summary>Click to view detailed Breakdown of each SEGMENT</summary>
+
+### Breakdown of each segment:
+
+1. **Source Port**  
+   - **Example**: `12345`  
+     This represents the source port number, indicating which application on the sender's side is sending the data.
+
+2. **Destination Port**  
+   - **Example**: `80`  
+     This represents the destination port number. Port 80 is commonly used for HTTP traffic.
+
+3. **Flag bits**  
+   - **Example**: `DF, MF`  
+     Flag bits control the fragmentation of the segment. 
+     - **DF** (Don't Fragment): Tells routers not to fragment the packet.
+     - **MF** (More Fragments): Indicates more fragments of the same packet are coming.
+
+4. **Sequence Number**  
+   - **Example**: `4567890123`  
+     This is a sequence number used to keep track of the ordering of segments in the TCP connection. It ensures that data is reassembled in the correct order at the destination.
+
+5. **Checksum**  
+   - **Example**: `0x1A2B3C4D`  
+     The checksum is used for error checking to ensure the integrity of the data in the TCP segment. If any bit errors occur during transmission, the checksum will not match and the segment will be discarded.
+
+6. **Options Field**  
+   - **Example**: `Max Segment Size: 1460, No-Operation`  
+     This field allows for various options such as the maximum segment size (MSS) or no-operation instructions for padding the segment.
+
+These segments form the key parts of a TCP header and play crucial roles in establishing reliable data transmission.
+
+</details>
 
 #### **Step 3: Network Layer (Layer 3)**
 - The TCP segments are wrapped in an **IP header**.
