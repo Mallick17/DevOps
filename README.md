@@ -58,7 +58,43 @@
   - Protocols include **HTTP, HTTPS, FTP, SMTP, DNS**.
 
 ---
+## TCP/IP Model
+The TCP/IP (Transmission Control Protocol/Internet Protocol) Model is a set of networking protocols that explain how data is transmitted over the internet. Unlike the OSI Model, the TCP/IP Model consists of only 4 layers, which correspond to multiple layers of the OSI Model. The TCP/IP Model is widely used for real-world networking and forms the foundation of modern internet communication.
+![tcp_ip_model_with_protocols_and_addresses-h](https://github.com/user-attachments/assets/84514094-10b3-437f-b7a6-8503fec369f9)
 
+### Breaking Down the TCP/IP Model
+#### 1. Network Access Layer
+The Network Access Layer is responsible for how data is physically transmitted over the network. It includes both the Physical Layer and Data Link Layer of the OSI Model.
+For example, when you plug an Ethernet cable into a computer, this layer ensures the data is sent and received correctly over the physical medium.
+- Defines how data is transmitted over physical media such as Ethernet, Wi-Fi, and Bluetooth.
+- Uses MAC (Media Access Control) addresses to ensure data reaches the correct device.
+- Includes protocols such as Ethernet, ARP (Address Resolution Protocol), and PPP (Point-to-Point Protocol).
+
+#### 2. Internet Layer
+The Internet Layer is responsible for addressing, routing, and delivering packets across different networks. It corresponds to the Network Layer of the OSI Model.
+For example, when you type a website URL, the Internet Layer ensures that your request reaches the correct web server by using IP addressing.
+- Handles IP addressing and packet routing.
+- Uses IP headers to determine source and destination IP addresses.
+- Key protocols include IP (Internet Protocol), ICMP (Internet Control Message Protocol), and IPSec (Internet Protocol Security).
+
+#### 3. Transport Layer
+The Transport Layer ensures reliable data transmission between devices. It corresponds to the Transport Layer of the OSI Model.
+For example, when you stream a video, the Transport Layer ensures that all packets are delivered correctly and in order.
+- Provides end-to-end communication between devices.
+- Uses TCP (Transmission Control Protocol) for reliable communication with error checking and retransmission.
+- Uses UDP (User Datagram Protocol) for faster but less reliable data transmission.
+- Segments and reassembles data for correct delivery.
+
+#### 4. Application Layer
+The Application Layer includes all protocols and services that users interact with. It corresponds to the Application, Presentation, and Session Layers of the OSI Model.
+For example, when you send an email using Gmail, the Application Layer ensures that your message is formatted correctly and sent to the correct recipient.
+- Provides user interface and communication protocols.
+- Handles encryption, compression, and session management.
+- Common protocols include HTTP, HTTPS, FTP, SMTP, DNS, and SSH.
+
+The TCP/IP Model is the backbone of internet communication, simplifying the OSI Model into a practical framework used in modern networking.
+
+---
 ### **How Data Travels Through the OSI & TCP/IP Model (Example of an HTTP Request)**  
 #### Key Difference of TCP/IP Model Compared to OSI Model
 - Network Access Layer (Equivalent to OSI Layers 1 & 2)
