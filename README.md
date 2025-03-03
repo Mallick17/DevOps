@@ -166,6 +166,19 @@ These segments form the key parts of a TCP header and play crucial roles in esta
 
 These segments are part of the **IP header** and help ensure the proper delivery and handling of IP packets across networks.
 
+- When data is sent over a network, the **IP body** contains the actual **segment** that was received from the **Transport Layer** (like a TCP segment). This segment is not changed in any way by the IP layer.
+
+However, the **IP header** is added to this body. The IP header contains important information like:
+- **Source and Destination IP addresses**
+- **TTL (Time to Live)**, which decreases every time the packet passes through a router
+- **Protocol Type** (whether it’s TCP, UDP, etc.)
+
+As the packet travels through the network, the IP header is updated, especially the **TTL**, which changes each time the packet goes through a router (or hop). 
+
+Together, the **IP header** and the **body** (which contains the segment) form the **IP packet**. 
+
+The **IP layer** also handles **fragmentation**. If a packet is too large to travel through a network (because of the **Maximum Transmission Unit** or MTU), it is broken into smaller pieces at the **routers** along the way. These pieces are called fragments, and they can be reassembled at the destination.
+
 </details>
 
 #### **Step 4: Data Link Layer (Layer 2)**
