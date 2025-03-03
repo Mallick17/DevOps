@@ -97,14 +97,11 @@ The TCP/IP Model is the backbone of internet communication, simplifying the OSI 
 ---
 ### **How Data Travels Through the OSI & TCP/IP Model (Example of an HTTP Request)**  
 #### Key Difference of TCP/IP Model Compared to OSI Model
-- Network Access Layer (Equivalent to OSI Layers 1 & 2)
-  - Handles both physical transmission and framing of data for delivery.
-  - OSI separates physical transmission and data framing, while TCP/IP combines them into one layer (Network Access).
-  - The TCP/IP model is more practical and closely follows real-world networking implementations.
 ![OSI-vs-TCP](https://github.com/user-attachments/assets/5498ea21-5e75-4618-8349-08394bcf2a64)
 
-**Data Flow Diagram**
-![Screenshot 2025-02-26 121702](https://github.com/user-attachments/assets/01442827-24b7-4c79-be6d-9f80fc57a1f5)
+#### **Data Flow Diagram**
+![Screenshot 2025-02-26 121702](https://github.com/user-attachments/assets/d53c5368-4ca8-43ec-a14c-35e57548f055)
+
 
 #### **Step 1: Application Layer (Layer 7)**
 - The **Application Layer** is where user-facing applications and protocols operate. It’s responsible for enabling communication between different applications across a network.
