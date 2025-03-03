@@ -59,7 +59,12 @@
 
 ---
 
-### **How Data Travels Through the OSI Model (Example of an HTTP Request)**  
+### **How Data Travels Through the OSI & TCP/IP Model (Example of an HTTP Request)**  
+#### Key Difference of TCP/IP Model Compared to OSI Model
+- Network Access Layer (Equivalent to OSI Layers 1 & 2)
+  - Handles both physical transmission and framing of data for delivery.
+  - OSI separates physical transmission and data framing, while TCP/IP combines them into one layer (Network Access).
+  - The TCP/IP model is more practical and closely follows real-world networking implementations.
 ![Screenshot 2025-02-26 121702](https://github.com/user-attachments/assets/01442827-24b7-4c79-be6d-9f80fc57a1f5)
 
 #### **Step 1: Application Layer (Layer 7)**
