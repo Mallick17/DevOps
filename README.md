@@ -332,9 +332,25 @@ This is the basic structure of an **Ethernet frame**, which is used to transmit 
   - **Use Case**: Used when speed is more important than reliability (e.g., video streaming, online gaming).
 
 ---
-## OSI vs TCP/IP Model
-![OSI-vs-TCP-vs-Hybrid-2](https://github.com/user-attachments/assets/67a69c23-9ab9-4c4a-b356-81fdbd5f1345)
 
 # TCP/IP Model
 ![tcp_ip_model_with_protocols_and_addresses-h](https://github.com/user-attachments/assets/91b7120c-2902-4b8b-bc83-d95fa462c0b1)
 
+## OSI vs TCP/IP Model
+![OSI-vs-TCP](https://github.com/user-attachments/assets/5498ea21-5e75-4618-8349-08394bcf2a64)
+
+
+| **Parameter**                     | **OSI Model**                                                                                                   | **TCP/IP Model**                                                                                             |
+|------------------------------------|-----------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
+| **Full form**                      | OSI stands for Open Systems Interconnection.                                                                    | TCP/IP stands for Transmission Control Protocol/Internet Protocol.                                          |
+| **Definition**                     | It is a generic, protocol-independent standard that serves as a communication gateway between the network and the end-user. | This is a protocol-dependent model that allows the connection of hosts over a network.                      |
+| **Number of layers**               | 1. Physical<br>2. Data Link<br>3. Network<br>4. Transport<br>5. Session<br>6. Presentation<br>7. Application       | 1. Network Access<br>2. Internet<br>3. Transport<br>4. Application                                           |
+| **Reliability**                    | It is less reliable.                                                                                           | TCP/IP is more reliable.                                                                                     |
+| **Protocol replacement**           | Protocols are easy to replace.                                                                                 | Protocols are not easy to replace.                                                                            |
+| **Function**                        | It offers standardization to different hardware devices, such as routers and switches.                         | It provides a connection between various computers but does not provide standardization to hardware devices. |
+| **Approach type**                  | Follows a vertical approach.                                                                                   | Follows a horizontal approach.                                                                                |
+| **Data link and physical layer**   | The data link layer and physical layer are separate.                                                           | The data link and physical layers are combined as a single host-to-network layer.                           |
+| **Service type**                   | In the OSI model, the network layer provides connection-oriented and connectionless services.                   | In this model, the network layer provides only connectionless service.                                      |
+| **Assurance**                       | The transport layer provides a guarantee for the delivery of packets.                                           | The transport layer in this model does not provide assurance for delivery of packets.                       |
+| **Session and presentation layer** | The session and presentation layers are separate.                                                              | The session and presentation layers are not segregated and are included in the application layer.            |
+| **Minimum header size**            | The minimum header size is 5 bytes.                                                                             | The minimum header size is 20 bytes.                                                                          |
