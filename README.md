@@ -65,6 +65,9 @@
   - Handles both physical transmission and framing of data for delivery.
   - OSI separates physical transmission and data framing, while TCP/IP combines them into one layer (Network Access).
   - The TCP/IP model is more practical and closely follows real-world networking implementations.
+![OSI-vs-TCP](https://github.com/user-attachments/assets/5498ea21-5e75-4618-8349-08394bcf2a64)
+
+**Data Flow Diagram**
 ![Screenshot 2025-02-26 121702](https://github.com/user-attachments/assets/01442827-24b7-4c79-be6d-9f80fc57a1f5)
 
 #### **Step 1: Application Layer (Layer 7)**
