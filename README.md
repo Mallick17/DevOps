@@ -332,3 +332,9 @@ This is the basic structure of an **Ethernet frame**, which is used to transmit 
   - **Use Case**: Used when speed is more important than reliability (e.g., video streaming, online gaming).
 
 ---
+## OSI vs TCP/IP Model
+![OSI-vs-TCP-vs-Hybrid-2](https://github.com/user-attachments/assets/67a69c23-9ab9-4c4a-b356-81fdbd5f1345)
+
+# TCP/IP Model
+![tcp_ip_model_with_protocols_and_addresses-h](https://github.com/user-attachments/assets/91b7120c-2902-4b8b-bc83-d95fa462c0b1)
+
