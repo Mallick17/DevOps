@@ -58,3 +58,51 @@
   - Protocols include **HTTP, HTTPS, FTP, SMTP, DNS**.
 
 ---
+
+### **How Data Travels Through the OSI Model (Example of an HTTP Request)**  
+
+#### **Step 1: Application Layer (Layer 7)**
+- A user sends an **HTTP request** to access a webpage.
+- The **HTTP header** is added to the data.
+
+#### **Step 2: Transport Layer (Layer 4)**
+- TCP segments the data into smaller packets.
+- A **TCP header** is added with **source port, destination port, and sequence number**.
+
+#### **Step 3: Network Layer (Layer 3)**
+- The TCP segments are wrapped in an **IP header**.
+- The **IP header contains source and destination IP addresses**.
+
+#### **Step 4: Data Link Layer (Layer 2)**
+- The packet(IP datagram) is wrapped with a **MAC header**.
+- The **MAC header contains source and destination MAC addresses**.
+
+#### **Step 5: Physical Layer (Layer 1)**
+- Data is converted into **raw bits (0s and 1s)** and transmitted through the network.
+
+#### **Step 6: Data Transmission Over the Internet**
+- The data is sent **from the sender (Device A) to the receiver (Device B)**.
+- It passes through **multiple routers**, with each router updating the **MAC addresses** for the next hop.
+
+#### **Step 7: Data Reassembly at the Receiver**
+- At **Device B**, the process is reversed:
+  - **Physical Layer** receives raw bits. -- Physical Layer: Receives the raw bits.
+  - **Data Link Layer** reads MAC addresses. -- Data Link Layer: Removes the MAC header.
+  - **Network Layer** extracts the IP header. -- Network Layer: Removes the IP header.
+  - **Transport Layer** reassembles TCP segments. -- Transport Layer: Removes the TCP header.
+  - **Application Layer** processes the HTTP request. -- Application Layer: Processes the HTTP request.
+
+---
+
+#### TCP vs. UDP
+- **TCP (Transmission Control Protocol)**:
+  - **Reliability**: Provides reliable, error-checked communication.
+  - **Process**: Divides data into segments, each with a sequence number for reassembly.
+  - **Use Case**: Used when data integrity is crucial (e.g., web browsing, email).
+
+- **UDP (User Datagram Protocol)**:
+  - **Speed**: Faster and simpler than TCP.
+  - **Reliability**: Does not provide error-checking or reliability.
+  - **Use Case**: Used when speed is more important than reliability (e.g., video streaming, online gaming).
+
+---
