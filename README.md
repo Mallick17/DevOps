@@ -122,32 +122,6 @@ This is the **Application Layer**'s responsibility: to create a request that the
 
 #### The **Application Layer** adds the relevant **protocol headers** to the data. Some of these headers include:
 
-1. **HTTP Method**
-   - **Example**: `GET`
-     - This specifies the action to be performed (e.g., retrieving a page from the server).
-  
-2. **Resource**
-   - **Example**: `/index.html`
-     - This specifies the resource being requested from the server (e.g., a webpage).
-
-3. **Protocol Version**
-   - **Example**: `HTTP/1.1`
-     - This indicates the version of the HTTP protocol being used.
-
-4. **Host**
-   - **Example**: `www.example.com`
-     - This specifies the server's domain name or IP address to which the request is being sent.
-
-5. **User-Agent**
-   - **Example**: `Mozilla/5.0`
-     - This identifies the client application (web browser) making the request.
-
-6. **Other Headers**
-   - Examples: `Accept-Language`, `Accept-Encoding`, `Connection`, etc.
-     - These headers contain additional information about how the client prefers to receive data, which languages it supports, and whether the connection should be kept open or closed.
-
----
-
 ### **Breakdown of each HTTP header (for Application Layer)**:
 
 1. **HTTP Method**
