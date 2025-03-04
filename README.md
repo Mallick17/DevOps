@@ -233,48 +233,6 @@ CORS and security headers help in **controlling access** and **preventing attack
 
 ---
 
-## **7. Common HTTP Headers & Their Uses**  
-
-| **Header** | **Type** | **Description** | **Example** |
-|-----------|---------|---------------|------------|
-| **User-Agent** | Request | Identifies the client (browser, OS). | `User-Agent: Mozilla/5.0` |
-| **Accept** | Request | Specifies accepted response formats. | `Accept: application/json` |
-| **Authorization** | Request | Handles authentication. | `Authorization: Bearer <token>` |
-| **Referer** | Request | Indicates the request source. | `Referer: https://google.com` |
-| **Content-Type** | Response | Defines response format. | `Content-Type: text/html` |
-| **Set-Cookie** | Response | Sends cookies to the client. | `Set-Cookie: sessionId=xyz123; Path=/` |
-| **Cache-Control** | Both | Controls caching behavior. | `Cache-Control: no-cache` |
-| **ETag** | Response | Helps with caching. | `ETag: "abcdef123456"` |
-
----
-
-## **8. Authentication & Caching in HTTP Headers**  
-
-### **🔐 Authentication Headers**  
-Used for managing **logged-in users, session tokens, and credentials**.  
-- Example for **Basic Authentication**:  
-  ```http
-  Authorization: Basic dXNlcm5hbWU6cGFzc3dvcmQ=
-  ```
-
-### **⚡ Caching Headers**  
-Help store responses **in the browser or CDN to reduce load times**.  
-- Example for **no caching**:  
-  ```http
-  Cache-Control: no-cache, no-store, must-revalidate
-  ```
-
----
-
-## **9. Deprecated Headers (X-Prefix Headers)**  
-🚫 **Headers with the "X-" prefix were deprecated in 2012.**  
-- Older headers used `"X-"` (e.g., `X-Powered-By`), but newer headers avoid this.  
-- Example of a **deprecated header**:  
-  ```http
-  X-Frame-Options: DENY
-  ```
-
----
 
 ## **Conclusion**  
 Understanding HTTP headers is **crucial for web security, API communication, and optimization**.  
