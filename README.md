@@ -61,3 +61,94 @@ Now that both parties have established a shared session key, all subsequent comm
 
 ## Conclusion
 SSL certificates are a fundamental part of web security. They encrypt communication, verify website authenticity, and build trust between users and websites. Organizations and developers should always implement SSL to protect user data and improve website security.
+
+### **Step-by-Step Guide to Configure SSL in Nginx**  
+
+#### **Step 1: Install Nginx (If Not Installed)**
+If Nginx is not installed, install it using:  
+```bash
+sudo apt update && sudo apt install nginx -y
+```
+
+#### **Step 2: Install Certbot for Free SSL (Let's Encrypt)**
+For Let's Encrypt SSL, install Certbot:  
+```bash
+sudo apt install certbot python3-certbot-nginx -y
+```
+
+#### **Step 3: Obtain an SSL Certificate**  
+Run the following command to generate a free SSL certificate:  
+```bash
+sudo certbot --nginx -d yourdomain.com -d www.yourdomain.com
+```
+- Replace `yourdomain.com` with your actual domain.  
+- Certbot will automatically configure Nginx for SSL.  
+
+#### **Step 4: Verify SSL Certificate**
+After installation, check if the certificate is properly installed:  
+```bash
+sudo certbot certificates
+```
+
+#### **Step 5: Configure Nginx for SSL Manually (If Needed)**
+If Certbot didn’t auto-configure Nginx, edit the Nginx config file:  
+```bash
+sudo nano /etc/nginx/sites-available/default  # Ubuntu/Debian
+```
+Modify or add the following block:
+```nginx
+server {
+    listen 80;
+    server_name yourdomain.com www.yourdomain.com;
+    return 301 https://$host$request_uri;  # Redirect HTTP to HTTPS
+}
+
+server {
+    listen 443 ssl;
+    server_name yourdomain.com www.yourdomain.com;
+
+    ssl_certificate /etc/letsencrypt/live/yourdomain.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/yourdomain.com/privkey.pem;
+
+    ssl_protocols TLSv1.2 TLSv1.3;
+    ssl_ciphers HIGH:!aNULL:!MD5;
+
+    location / {
+        root /var/www/html;
+        index index.html index.php;
+    }
+}
+```
+- Replace `yourdomain.com` with your actual domain.  
+
+#### **Step 6: Restart Nginx**
+Save the file (`CTRL + X`, then `Y`, then `Enter`) and restart Nginx:  
+```bash
+sudo nginx -t  # Test configuration
+sudo systemctl restart nginx
+```
+
+#### **Step 7: Auto-Renew SSL Certificate**
+Let's Encrypt certificates expire every 90 days. Set up automatic renewal:  
+```bash
+sudo certbot renew --dry-run
+```
+To automate renewal, add a cron job:  
+```bash
+sudo crontab -e
+```
+Add the following line:  
+```bash
+0 3 * * * certbot renew --quiet && systemctl reload nginx
+```
+This renews the SSL certificate every day at 3 AM.
+
+#### **Step 8: Test SSL**
+Check if SSL is working by visiting:  
+🔗 **https://yourdomain.com**  
+
+You can also use:  
+```bash
+curl -I https://yourdomain.com
+```
+---
