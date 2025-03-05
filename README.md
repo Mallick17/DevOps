@@ -87,4 +87,18 @@ A **web server** is a system that hosts and delivers web content to users over t
 - **Nginx** is optimized for high performance and efficiency, making it ideal for handling static content, reverse proxying, and load balancing.
 - **Apache** is more flexible and feature-rich, especially in dynamic content scenarios, but may require more resources to handle a high number of simultaneous connections.
 
-
+| **Aspect**               | **Nginx**                                         | **Apache**                                      |
+|--------------------------|---------------------------------------------------|-------------------------------------------------|
+| **Architecture**          | Event-driven, asynchronous, non-blocking          | Process-driven or thread-driven, blocking       |
+| **Performance**           | Optimized for handling many concurrent connections with low resource usage | Less efficient with high concurrency, more resource-intensive |
+| **Serving Static Content**| Excellent, very fast for static files            | Handles static content well, but less efficient compared to Nginx |
+| **Serving Dynamic Content**| Relies on external processors (e.g., PHP-FPM)   | Handles dynamic content natively (via modules like `mod_php`) |
+| **Configuration**         | Simple, uses `nginx.conf`, lacks `.htaccess`    | Highly flexible, uses `.htaccess` for per-directory configuration |
+| **Module System**         | Less flexible, modules compiled into Nginx core  | Highly modular, modules can be dynamically loaded |
+| **Load Balancing**        | Built-in load balancing features                 | Requires external modules for load balancing (e.g., `mod_proxy_balancer`) |
+| **Resource Usage**        | Low memory and CPU usage, highly efficient       | More memory and CPU usage due to process/thread model |
+| **Ease of Use**           | Easier for high-performance setups, reverse proxying, and load balancing | More suited for complex, dynamic applications and flexible configurations |
+| **Flexibility**           | Less flexible with dynamic content handling      | Very flexible, with extensive mod support and `.htaccess` configuration |
+| **Use Case**              | Best for static content, reverse proxying, and load balancing | Best for dynamic content, flexible server-side scripting |
+| **Common Deployment**     | Often used as a reverse proxy in front of Apache | Common in shared hosting and dynamic content-heavy sites |
+| **Support for Dynamic Content**| Limited (requires external processes like PHP-FPM) | Full support (via modules like `mod_php`) |
