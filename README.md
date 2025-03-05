@@ -1,6 +1,8 @@
 # SSL (Secure Sockets Layer)
 - SSL (Secure Sockets Layer) is a cryptographic protocol that provides secure communication over the internet. It ensures that the data exchanged between a client (browser) and a web server remains encrypted and protected from malicious attacks, such as eavesdropping, man-in-the-middle attacks, and data tampering.
 ## How SSL Works - Step by Step
+![How-SSL-Certificates-Work-1](https://github.com/user-attachments/assets/a0d87abe-b61e-48be-8d17-75554e341eed)
+
 ### 1. **Client Requests a Secure Connection**
 When a user visits a website that uses HTTPS, the browser initiates a request to establish a secure connection with the web server.
 
