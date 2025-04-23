@@ -7,6 +7,18 @@ There are two common types of proxy servers:
 - **Forward Proxy**
 - **Reverse Proxy**
 
+**Forward Proxy vs. Reverse Proxy** comparison:
+
+| **Aspect**         | **Forward Proxy**                                                                 | **Reverse Proxy**                                                                |
+|--------------------|-----------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
+| **Purpose**        | Used by clients to access external resources, often to bypass restrictions or maintain anonymity. | Used by servers to manage incoming traffic, enhance security, and improve performance. |
+| **Location**       | Closer to the client, within the client's network or on the internet.             | Closer to the server, often in front of web servers.                             |
+| **Traffic Flow**   | Client → Proxy → External Server → Proxy → Client                                 | Client → Proxy → Server → Proxy → Client                                        |
+| **Security**       | Protects client identity, enforces security policies for outbound traffic.        | Protects server identity, acts as a shield for web servers.                     |
+| **Use Cases**      | Accessing blocked content, geo-spoofing, web scraping.                            | Load balancing, caching, SSL termination.                                       |
+| **Configuration**  | Configured by the client or network administrator.                                | Configured by the server administrator.                                         |
+| **Scalability**    | Not directly related to server scaling.                                           | Essential for server scalability and handling high traffic.                     |
+
 ---
 
 ## Forward Proxy
