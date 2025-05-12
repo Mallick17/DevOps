@@ -1,10 +1,4 @@
-# Interview Questions
-To tailor answers for a DevOps job role based on your GitHub repositories at [https://github.com/Mallick17](https://github.com/Mallick17), I’ll focus on questions and responses that highlight your expertise in DevOps practices, tools, and methodologies. Since I don’t have direct access to your repositories, I’ll assume they involve projects with Ruby on Rails, Docker, AWS services (e.g., EC2, RDS, CodeBuild, CodePipeline, ECS), and CI/CD pipelines, as inferred from our previous conversations and your request to exclude Ansible, Jenkins, Prometheus, and Grafana. The answers will emphasize skills like containerization, cloud infrastructure, automation, CI/CD, and collaboration, which are critical for a DevOps role. I’ll select a subset of the previously provided interview questions that are most relevant to DevOps and provide concise, professional answers that reflect your experience and align with the job role.
-
-For each answer, I’ll assume you’ve worked on a real-time chat application deployed with Docker and AWS, as this aligns with typical projects in your context. The responses will use the STAR method (Situation, Task, Action, Result) where applicable to demonstrate problem-solving and impact. I’ll also include one artifact—a sample `buildspec.yml` file for AWS CodeBuild—to showcase a key DevOps configuration from your CI/CD pipeline, wrapped in the required `<xaiArtifact/>` tag.
-
----
-
+# Interview Questions for DevOps
 ### **Selected Interview Questions and Answers for a DevOps Role**
 
 #### **1. How do you set up an EC2 instance for deploying a Ruby on Rails application?**
