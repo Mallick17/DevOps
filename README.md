@@ -214,6 +214,73 @@ The table below lists some important protocols, their descriptions, and the port
 | **MS SQL Server** | 1433            | Microsoft SQL Server – Protocol for client-server communication with MS SQL databases. |
 | **MSSQL**         | 1433            | Microsoft SQL Server default port for communication with databases. |
 
+---
+
+### 1. **Choosing the Right Connection for NAS**
+
+When connecting a NAS (Network-Attached Storage) to a system (Windows, Mac, Linux), the common connection types are:
+
+* **SMB**: Originally for Windows, but works on Mac and Linux too.
+* **AFP**: A protocol developed by Apple for Mac systems.
+* **NFS**: A Linux/Unix-based protocol for Linux systems.
+
+Other options like FTP, WebDAV, and iSCSI exist, but these three (SMB, AFP, NFS) are the most commonly used.
+
+---
+
+### 2. **Connection Protocols and Performance**
+
+* **SMB**:
+
+  * Best performance on Windows, but it works well on Linux and Mac.
+  * Fast file transfer on both Linux and Mac, though it’s slower than AFP on Mac.
+* **AFP**:
+
+  * Created for Macs. Best performance when used with Mac systems.
+  * On Linux, AFP is slower (around 2 minutes) than SMB for both upload and download.
+* **NFS**:
+
+  * Designed for Linux/Unix systems, so the best performance is achieved when connecting Linux devices.
+  * On Linux, NFS shows the fastest upload speeds (\~1:46 minutes).
+
+---
+
+### 3. **Performance Test Results**
+
+**On Linux**:
+
+* **Downloading**: SMB and NFS performed similarly (\~2 minutes).
+* **Uploading**: NFS was the fastest (\~1:46 minutes), followed by SMB.
+
+**On Mac**:
+
+* **Downloading**: AFP was the fastest (\~1:28 minutes), followed by NFS and SMB.
+* **Uploading**: AFP and NFS were similar in speed (\~1:57 minutes).
+
+**On Windows**:
+
+* **Downloading and Uploading**: SMB is the best option for Windows.
+
+---
+
+### 4. **Summary of Best Protocols for Each System**
+
+* **Windows**: Use **SMB** for both downloading and uploading files.
+* **Linux**: Use **NFS** for uploading (fastest) and **SMB** for downloading (best speed).
+* **Mac**: Use **AFP** for downloading (best performance) and either **SMB** or **AFP** for uploading (similar speeds).
+
+---
+
+### 5. **Final Thoughts**
+
+* Choose your protocol based on the system you are using:
+
+  * **Windows**: Always go with SMB.
+  * **Linux**: NFS is great for uploading, and SMB is solid for downloading.
+  * **Mac**: AFP gives the best download speed, with SMB and AFP both being good for uploads.
+
+---
+
 ### Summary
 
 - **Application Protocols** like HTTP, HTTPS, and FTP help in data communication at higher levels, such as web browsing and file transfer.
