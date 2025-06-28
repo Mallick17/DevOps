@@ -216,6 +216,8 @@ The table below lists some important protocols, their descriptions, and the port
 
 ---
 
+## SMB vs. AFP vs. NFS
+
 ### 1. **Choosing the Right Connection for NAS**
 
 When connecting a NAS (Network-Attached Storage) to a system (Windows, Mac, Linux), the common connection types are:
